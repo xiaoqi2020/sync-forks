@@ -2,21 +2,21 @@ name: 重新Fork仓库
 on:
   workflow_dispatch:
 
-#  schedule:
-#    - cron: 0 8 */5 * *
+  schedule:
+    - cron: 0 8 */5 * *
 
 jobs: 
   build:
     runs-on: Ubuntu-20.04
     name: 重新Fork仓库
     steps:
-    - name: 重新拉取281677160/build-openwrt仓库
+    - name: 重新拉取281677160/openwrt-package仓库
       uses: danshui-git/github-forks-sync-action@main
       with:
         github_token: ${{ secrets.REPO_TOKEN }}
-        upstream_repository: 281677160/build-openwrt
-        upstream_branch: main
-        target_repository: danshui-git/build-openwrt       #修改成你的帐号/仓库名字
-        target_branch: main                                #你仓库的分支
+        upstream_repository: 281677160/openwrt-package
+        upstream_branch: master
+        target_repository: dxiaoqi2020/openwrt-package       #修改成你的帐号/仓库名字
+        target_branch: master                                #你仓库的分支
         force: true
         tags: false
