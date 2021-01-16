@@ -11,7 +11,7 @@ jobs:
     name: 重新Fork仓库
     steps:
     - name: 重新拉取281677160/openwrt-package仓库
-      uses: danshui-git/github-forks-sync-action@main
+      uses: xiaoqi2020/openwrt-package
       with:
         github_token: ${{ secrets.REPO_TOKEN }}
         upstream_repository: 281677160/openwrt-package
