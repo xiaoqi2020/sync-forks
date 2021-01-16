@@ -13,7 +13,7 @@ jobs:
     - name: 重新拉取281677160/openwrt-package仓库
       uses: danshui-git/github-forks-sync-action@main
       with:
-        github_token: ${{ secrets.REPO_TOKEN }}
+        github_token: ${{ secrets.forkkey }}
         upstream_repository: 281677160/openwrt-package
         upstream_branch: master
         target_repository: dxiaoqi2020/openwrt-package       #修改成你的帐号/仓库名字
